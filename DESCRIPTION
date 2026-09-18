@@ -1,0 +1,22 @@
+Package: awwafwas
+Title: American Water Works Association (AWWA) Free Water Audit Software (FWAS): data tools   
+Version: 1.0.1
+Authors@R: 
+    person("Michael", "Thompson", , "michael.thompson@drbc.gov", role = c("aut", "cre"))
+Description: The R code defines a function compile_FWAS that automates the extraction and compilation of 
+    data from multiple versions of AWWA Free Water Audit Software (FWAS) reports, which are expected to be in 
+    Excel (.xlsx) format. The function takes a directory path containing these reports as input, iteratively 
+    reads each file, identifies its FWAS version (e.g., 6.0, 5.0, 4.1/4.2) by checking specific cells, and then 
+    extracts relevant data points from various worksheets (e.g., "Start Page," "Worksheet," "Dashboard") 
+    based on predefined indexing files. It consolidates this information into a single data frame, including 
+    details like the original FWAS version, filename, compilation timestamp, and compiler's username, while 
+    also flagging potential data quality issues like missing scores or negative water losses. Optionally, users 
+    can specify a directory and filename to save the compiled data as a new Excel workbook.
+License: `use_mit_license()`, `use_gpl3_license()` or friends to pick a
+    license
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.3.2
+Depends: 
+    R (>= 3.5)
+LazyData: true
